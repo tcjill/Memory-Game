@@ -114,23 +114,9 @@ function notMatching(){
 }
 //timer//
 
-  /**
-   * timer() function will start counting the time
-   * when user start to click card/start to play game
-   */
-  function startTimer() {
-    interval = setInterval(function() {
-        timer.innerHTML = "Time: " + minute + " min " +second + " second";
-        second++;
-        if (second == 60) {
-            minute++;
-            second = 0;
-        }
-        if (minute == 60) {
-            hour++;
-            minute = 0;
-        }
-    }, 1000);
+
+function startTimer() {
+ t = setInterval(add, 1000);
 }
 
 /*
@@ -155,5 +141,6 @@ function moveCounter(){
   moves++;
   moveCounter.innerHTML = moves;
 }
+
 
 }
