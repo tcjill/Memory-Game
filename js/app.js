@@ -115,6 +115,16 @@ function notMatching(){
 //timer//
 
 
+function startTimer() {
+ t = setInterval(add, 1000);
+}
+
+/*
+* Stop the Timer
+*/
+function stopTimer() {
+ clearInterval();
+}
 
 
 

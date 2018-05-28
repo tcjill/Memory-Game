@@ -83,7 +83,12 @@ h1 {
 
 /*
  * Styles for the Score Panel
+
  */
+ .moves, .timer {
+    padding: 20px;
+    font-size: 1.2em;
+  }
 
 .score-panel {
     text-align: left;
