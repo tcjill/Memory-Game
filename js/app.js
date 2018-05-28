@@ -108,13 +108,12 @@ function notMatching(){
    const time = document.getElementById('time');
 
 
+//timer//
 
 
 }
 //timer//
-function timer(){
-  t = setInterval(add, 1000);
-}
+
 
 
 
