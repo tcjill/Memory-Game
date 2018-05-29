@@ -17,7 +17,6 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
 }
 
@@ -83,12 +82,7 @@ h1 {
 
 /*
  * Styles for the Score Panel
-
  */
- .moves, .timer {
-    padding: 20px;
-    font-size: 1.2em;
-  }
 
 .score-panel {
     text-align: left;

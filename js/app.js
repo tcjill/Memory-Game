@@ -65,8 +65,7 @@ function newGame(){
   var deck = document.querySelector('.deck');
   var cardGrid = shuffle(allCards).map(function(card) {
     return makeCard(card);
-  });
-  
+  });  
   deck.innerHTML = cardGrid.join('');
 }
 
@@ -74,12 +73,11 @@ function newGame(){
  * set up the event listener for a card. If a card is clicked:
  */
 var cardList = document.querySelectorAll('.card');
-
 for(let card of cardList) {
   card.addEventListener('click', function(flipCard){
     //Disable clicking on the same card
     if (!card.classList.contains('open') &&     !card.classList.contains('show') && !card.classList.contains('match')){
-      
+      currentT = t;
   //Add the card to a *list* of "open" cards
     openCards.push(card);
 
@@ -124,21 +122,57 @@ function notMatching(){
     moveCounter();
     openCards = []; //Empty openCards array
    }, 700);
-   //const time = document.getElementById('time');
+   // const time = document.getElementById('time');
 
 
-//timer//
+// //timer//
+// var timer = new Timer();
+// }var h2 = document.getElementsByTagName('h2')[0],
+// start = document.getElementById('start'),
+// stop = document.getElementById('stop'),
+// clear = document.getElementById('clear'),
+// seconds = 0, minutes = 0, hours = 0,
+// t;
 
-
+// function add() {
+// seconds++;
+// if (seconds >= 60) {
+//     seconds = 0;
+//     minutes++;
+//     if (minutes >= 60) {
+//         minutes = 0;
+//         hours++;
+//     }
 }
-//timer//
 
+// h2.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+// timer();
+// }
+// function timer() {
+// t = setTimeout(add, 1000);
+// }
+
+
+
+// /* Start button */
+// start.onclick = timer;
+
+// /* Stop button */
+// stop.onclick = function() {
+// clearTimeout(t);
+// }
+
+// /* Clear button */
+// clear.onclick = function() {
+// h2.textContent = "00:00:00";
+// seconds = 0; minutes = 0; hours = 0;
+// }
 
 // Move Counter function
 function moveCounter(){
   moves++;
   moveCounter.innerHTML = moves;
 }
-
 
 }
