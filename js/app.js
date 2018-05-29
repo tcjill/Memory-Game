@@ -1,3 +1,22 @@
+const time = document.getElementById('time');
+// t is a global variable therefore its val can be accessed anywhere
+let t = 0;
+
+function Timer () {
+  var timer = setInterval(function() {
+        console.log(t);
+        t++;
+        if(t >= 0) {
+          time.innerHTML = t;
+          //here you could put other conditionals to make mins or whatever
+           /*clearInterval(timer);*/
+        }
+    }, 1000);
+}
+var timer = new Timer();
+console.log(t);
+
+
 // List of all cards
 var allCards = ['fa-diamond','fa-diamond',
               'fa-paper-plane-o','fa-paper-plane-o',
@@ -105,7 +124,7 @@ function notMatching(){
     moveCounter();
     openCards = []; //Empty openCards array
    }, 700);
-   const time = document.getElementById('time');
+   //const time = document.getElementById('time');
 
 
 //timer//
@@ -114,27 +133,6 @@ function notMatching(){
 }
 //timer//
 
-
-function startTimer() {
- t = setInterval(add, 1000);
-}
-
-/*
-* Stop the Timer
-*/
-function stopTimer() {
- clearInterval();
-}
-
-
-
-//restart button???
-
-function restartGame() {
-	restart.on('click', function() {
-		startGame();
-	})
-}
 
 // Move Counter function
 function moveCounter(){
