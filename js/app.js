@@ -167,7 +167,7 @@ function notMatching(){
 // clear.onclick = function() {
 // h2.textContent = "00:00:00";
 // seconds = 0; minutes = 0; hours = 0;
-// }
+// added comment and want to commit to timer
 
 // Move Counter function
 function moveCounter(){
