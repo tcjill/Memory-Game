@@ -2,6 +2,7 @@ const time = document.getElementById('time');
 // t is a global variable therefore its val can be accessed anywhere
 let t = 0;
 
+const restart = document.querySelector('.restart');
 
 function Timer () {
   var timer = setInterval(function() {
@@ -114,7 +115,12 @@ function cardMatch(){
   //empty  array
   openCards = [];
 }
+//reset and restart
+restart.addEventListener ('click', reset);
 
+function reset() {
+  location.reload();
+}
 // Not matching function
 function notMatching(){
 
