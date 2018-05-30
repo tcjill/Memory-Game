@@ -112,3 +112,9 @@ h1 {
    ul{
     list-style: none;
   }
+  .modal{
+      z-index: 2;
+      position: absolute;
+      width: 500px;
+      
+  }
