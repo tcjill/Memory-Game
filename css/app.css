@@ -109,3 +109,6 @@ h1 {
 #time{
     font-size: 50px;
    }
+   ul{
+    list-style: none;
+  }
