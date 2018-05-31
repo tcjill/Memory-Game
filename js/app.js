@@ -148,7 +148,7 @@ for (let i = 1; i <= 5; i++) {
     starLi.appendChild(starI);
     stars.appendChild(starLi);
 }  
-makeStars(star);
+
 
 
 // Move Counter function
