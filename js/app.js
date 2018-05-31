@@ -93,7 +93,7 @@ for(let card of cardList) {
         //Show cards
         card.classList.add('open','show');
         //Check if cards match
-        if (openCards[0].dataset.card ==   openCards[1].dataset.card){
+        if (openCards[0].dataset.card == openCards[1].dataset.card){
             cardMatch();
         } else {
             notMatching();
