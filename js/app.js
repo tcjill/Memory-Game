@@ -135,9 +135,6 @@ function notMatching(){
    // const time = document.getElementById('time');
 
 
-
-
-
 }
 
 const stars = document.querySelector('.stars');
