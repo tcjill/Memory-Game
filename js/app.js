@@ -143,14 +143,13 @@ function notMatching(){
 const stars = document.querySelector('.stars');
 let star = 1;
 // star -= 1;
-function makeStars(){
+
 for (let i = 1; i <= 5; i++) {
     const starLi = document.createElement('li');
     const starI = document.createElement('i');
     starI.classList.add('fa', 'fa-star');
     starLi.appendChild(starI);
     stars.appendChild(starLi);
-}
 }  
 makeStars(star);
 
