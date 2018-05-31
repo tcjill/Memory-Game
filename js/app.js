@@ -5,16 +5,16 @@ let t = 0;
 const restart = document.querySelector('.restart');
 
 function Timer () {
-  var timer = setInterval(function() {
-        console.log(t);
-        t++;
-        if(t >= 0) {
-          time.innerHTML = t;
+  var timer = setInterval(function() {
+        console.log(t);
+        t++;
+        if(t >= 0) {
+          time.innerHTML = t;
         
           //here could put other conditionals to make mins or whatever
-           /*clearInterval(timer);*/
+           /*clearInterval(timer);*/
 
-        }
+        }
     }, 1000);
 }
 
