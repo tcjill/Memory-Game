@@ -117,7 +117,7 @@ for (let card of cardList) {
         openCards = [];
     }
     //reset and restart
-    restart.addEventListener('click', reset);
+    restart.addEventListener('click', reset);}
 
     function reset() {
         location.reload();
@@ -130,7 +130,7 @@ for (let card of cardList) {
             for (let card of openCards) {
                 card.classList.remove('open', 'show');
             }
-            moveCounter();
+            
             openCards = []; //Empty openCards array
         }, 700);
         // const time = document.getElementById('time');
@@ -157,4 +157,3 @@ function moveCounter() {
         moveCounter.innerHTML = moves;
     }
 
-}
