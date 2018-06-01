@@ -138,18 +138,22 @@ for (let card of cardList) {
 
     }
 
-const stars = document.querySelector('.stars');
-    let star = 1;
-    // star -= 1;
+    const starRating = document.getElementsByClassName('stars')[0];
 
-for (let i = 1; i <= 5; i++) {
-    const starLi = document.createElement('li');
-    const starI = document.createElement('i');
-    starI.classList.add('fa', 'fa-star');
-    starLi.appendChild(starI);
-    stars.appendChild(starLi);
-    }   
-
+    function rating () {
+      switch (moves) {
+        case 15:
+          starRating.innerHTML = `<li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>`;
+          break;
+    
+        case 20:
+          starRating.innerHTML = `<li><i class="fa fa-star"></i></li>`;
+          break;
+    
+        default:
+      }
+    }
 
     // Move Counter function
 function moveCounter() {
