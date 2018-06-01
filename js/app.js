@@ -74,8 +74,8 @@ function newGame() {
     });
     deck.innerHTML = cardGrid.join('');
 }
+//set up event listener for a card clicked//
 
-//set up listener event if card is clicked
 
 var cardList = document.querySelectorAll('.card');
 for (let card of cardList) {
@@ -93,7 +93,7 @@ for (let card of cardList) {
                 //Show cards
                 card.classList.add('open', 'show');
                 //Check if cards match
-                if (openCards[0].dataset.card == openCards[1].dataset.card) {
+                if (openCards[0].dataset.card === openCards[1].dataset.card) {
                     cardMatch();
                 } else {
                     notMatching();
@@ -154,9 +154,5 @@ for (let card of cardList) {
       }
     }
 
-    // Move Counter function
-function moveCounter() {
-    moves++;
-        moveCounter.innerHTML = moves;
-    }
+ 
 
