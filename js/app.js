@@ -75,9 +75,8 @@ function newGame() {
     deck.innerHTML = cardGrid.join('');
 }
 
-/*
- * set up the event listener for a card. If a card is clicked:
- */
+//set up listener event if card is clicked
+
 var cardList = document.querySelectorAll('.card');
 for (let card of cardList) {
     card.addEventListener('click', function(flipCard) {
