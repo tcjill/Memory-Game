@@ -77,12 +77,15 @@ function newGame() {
     });
     deck.innerHTML = cardGrid.join('');
 }
+
+let movesMade = 0;
+
 //set up event listener for a card clicked//
 
 
 var cardList = document.querySelectorAll('.card');
 for (let card of cardList) {
-    card.addEventListener('click', function(flipCard) {
+    card.addEventListener('click', function() {
         //Disable clicking on the same card
         if (!card.classList.contains('open') && !card.classList.contains('show') && !card.classList.contains('match')) {
             currentT = t;
