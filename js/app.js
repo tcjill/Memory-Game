@@ -87,8 +87,14 @@ let cardsClicked = 0;
 var cardList = document.querySelectorAll('.card');
 for (let card of cardList) {
     card.addEventListener('click', function() {
-        movesMade++;
+    
         cardsClicked++;
+        if (cardsClicked == 2) {
+
+            movesMade++;
+            cardsClicked= 0; // resets card clicks 
+            
+            }
         document.querySelector('span.moves').innerHTML = movesMade;
         //Disable clicking on the same card
         if (!card.classList.contains('open') && !card.classList.contains('show') && !card.classList.contains('match')) {
