@@ -86,6 +86,8 @@ let movesMade = 0;
 var cardList = document.querySelectorAll('.card');
 for (let card of cardList) {
     card.addEventListener('click', function() {
+        movesMade++;
+        document.querySelector('span.moves').innerHTML = movesMade;
         //Disable clicking on the same card
         if (!card.classList.contains('open') && !card.classList.contains('show') && !card.classList.contains('match')) {
             currentT = t;
@@ -103,6 +105,7 @@ for (let card of cardList) {
                     cardMatch();
                 } else {
                     notMatching();
+                   
                 }
             }
         }
