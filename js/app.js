@@ -17,7 +17,10 @@ function Timer() {
         }
     }, 1000);
 }
-
+//stop timer function
+function stopTimer() {
+    clearInterval(gameTimer);
+}
 var timer = new Timer();
 console.log(t);
 
