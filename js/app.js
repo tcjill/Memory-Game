@@ -1,4 +1,4 @@
-const time = document.getElementById('time');
+/*const time = document.getElementById('time');
 // t is a global variable therefore its val can be accessed anywhere
 let t = 0;
 
@@ -14,15 +14,50 @@ function Timer() {
             //here could put other conditionals to make mins or whatever
             /*clearInterval(timer);*/
 
-        }
-    }, 1000);
-}
+      //  }
+    //}, 1000);
+//}
 //stop timer function
-function stopTimer() {
-    clearInterval(gameTimer);
+//function stopTimer() {
+   // clearInterval(gameTimer);
+//}
+//var timer = new Timer();
+//console.log(t);
+
+// Timer functions
+let sec = 0;
+let min = 0;
+let timer;
+
+function startTimer() {
+	timer = setInterval(insertTime, 1000);
 }
-var timer = new Timer();
-console.log(t);
+
+function stopTimer() {
+	clearInterval(timer);
+	sec = 0;
+	min = 0;
+}
+
+function insertTime() {
+	sec++;
+	
+	if (sec < 10) {
+		sec = `0${sec}`;
+	}
+	
+	if (sec >= 60) {
+		min++;
+		sec = "00";
+	}
+	
+	// display time
+	document.querySelector('timerOutput').innerHTML = "0" + min + ":" + sec;
+}
+
+
+
+
 
 
 // List of all cards
