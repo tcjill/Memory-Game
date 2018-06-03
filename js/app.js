@@ -152,6 +152,16 @@ for (let card of cardList) {
     }
 
   // Get the modal
+
+
+  /*congratulations when all cards match, show modal and moves, time and rating....I need to do this somehow....
+function congratulations(){
+    if (matchedCard.length == 16){
+        clearInterval(interval);
+        finalTime = timer.innerHTML;
+    //show congratulations modal
+    modal.classList.add("show");*/
+
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
