@@ -101,18 +101,20 @@ for (let card of cardList) {
             currentT = t;
             //Add the card to a *list* of "open" cards
             openCards.push(card);
-
+          
             //Prevent from showing more than two cards
             if (openCards.length > 2) {
-                //hide
+              //hide
             } else {
-                //Show cards
-                card.classList.add('open', 'show');
-                //Check if cards match
-                if (openCards[0].dataset.card === openCards[1].dataset.card) {
-                    cardMatch();
+              //Show cards
+              card.classList.add('open', 'show');
+              //Check if cards match
+          
+              if (openCards.length === 2) {
+                if (openCards[0].dataset.card == openCards[1].dataset.card) {
+                  cardMatch();
                 } else {
-                    notMatching();
+                  notMatching();
                    
                 }
             }
