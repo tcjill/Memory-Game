@@ -118,8 +118,11 @@ for (let card of cardList) {
                    
                 }
             }
-        }
-    });
+        }  
+    }
+});
+}
+    
 
     // cardMatch function
     function cardMatch() {
@@ -132,7 +135,7 @@ for (let card of cardList) {
         openCards = [];
     }
     //reset and restart
-    restart.addEventListener('click', reset);}
+    restart.addEventListener('click', reset);
 
     function reset() {
         location.reload();
