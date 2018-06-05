@@ -1,28 +1,83 @@
-const time = document.getElementById('time');
+//const time = document.getElementById('time');
 // t is a global variable therefore its val can be accessed anywhere
-let t = 0;
+//let t = 0;
 
 const restart = document.querySelector('.restart');
 
-function Timer() {
-    var timer = setInterval(function() {
-        console.log(t);
-        t++;
-        if (t >= 0) {
-            time.innerHTML = t;
+//function Timer() {
+    //var timer = setInterval(function() {
+       // console.log(t);
+       // t++;
+       // if (t >= 0) {
+          //  time.innerHTML = t;
 
             //here could put other conditionals to make mins or whatever
             /*clearInterval(timer);*/
 
-        }
-    }, 1000);
-}
+     //   }
+   // }, 1000);
+//}
 //stop timer function
-function stopTimer() {
-    clearInterval(gameTimer);
+//function stopTimer() {
+   // clearInterval(gameTimer);
+//}
+//var timer = new Timer();
+//console.log(t);
+
+// Timer functions
+let sec = 0;
+let min = 0;
+let timer;
+
+function startTimer() {
+timer = setInterval(insertTime, 1000);
 }
-var timer = new Timer();
-console.log(t);
+
+function stopTimer() {
+clearInterval(timer);
+sec = 0;
+min = 0;
+}
+
+function insertTime() {
+sec++;
+
+if (sec < 10) {
+sec = `0${sec}`;
+}
+
+if (sec >= 60) {
+min++;
+sec = "00";
+}
+
+// display time
+document.querySelector('.timerOutput').innerHTML = "0" + min + ":" + sec;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // List of all cards
@@ -85,6 +140,7 @@ let cardsClicked = 0;
 
 
 var cardList = document.querySelectorAll('.card');
+document.querySelector(".card").addEventListener("click", startTimer);
 for (let card of cardList) {
     card.addEventListener('click', function() {
     
@@ -98,7 +154,7 @@ for (let card of cardList) {
         document.querySelector('span.moves').innerHTML = movesMade;
         //Disable clicking on the same card
         if (!card.classList.contains('open') && !card.classList.contains('show') && !card.classList.contains('match')) {
-            currentT = t;
+            //currentT = t;
             //Add the card to a *list* of "open" cards
             openCards.push(card);
           
