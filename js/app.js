@@ -28,15 +28,20 @@ const restart = document.querySelector('.restart');
 let sec = 0;
 let min = 0;
 let timer;
-
+var started = false;
 function startTimer() {
-timer = setInterval(insertTime, 1000);
+    if (!started){
+        timer = setInterval(insertTime, 1000);
+        started = true;
+    }
+
 }
 
 function stopTimer() {
 clearInterval(timer);
 sec = 0;
 min = 0;
+started = false;
 }
 
 function insertTime() {
