@@ -61,30 +61,6 @@ document.querySelector('.timerOutput').innerHTML = "0" + min + ":" + sec;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // List of all cards
 var allCards = ['fa-diamond', 'fa-diamond',
     'fa-paper-plane-o', 'fa-paper-plane-o',
