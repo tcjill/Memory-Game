@@ -1,7 +1,7 @@
 //const time = document.getElementById('time');
 
 const restart = document.querySelector('.restart');
-
+let modal = document.querySelector('.modal-content');
 
 
 // Timer functions
