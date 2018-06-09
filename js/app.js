@@ -1,28 +1,8 @@
 //const time = document.getElementById('time');
-// t is a global variable therefore its val can be accessed anywhere
-//let t = 0;
 
 const restart = document.querySelector('.restart');
 
-//function Timer() {
-   //var timer = setInterval(function() {
-      // console.log(t);
-      // t++;
-      // if (t >= 0) {
-         //  time.innerHTML = t;
 
-           //here could put other conditionals to make mins or whatever
-           /*clearInterval(timer);*/
-
-    //   }
-  // }, 1000);
-//}
-//stop timer function
-//function stopTimer() {
-  // clearInterval(gameTimer);
-//}
-//var timer = new Timer();
-//console.log(t);
 
 // Timer functions
 let sec = 0;
@@ -233,7 +213,7 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 
-   const starRating = document.getElementsByClassName('stars')[0];
+const starRating = document.getElementsByClassName('stars')[0];
 
    function rating () {
      switch (moves) {
