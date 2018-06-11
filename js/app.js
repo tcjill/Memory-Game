@@ -213,19 +213,19 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 
-const starRating = document.getElementsByClassName('stars')[0];
+//const starRating = document.getElementsByClassName('stars')[0];
 
-   function rating () {
-     switch (moves) {
-       case 15:
-         starRating.innerHTML = `<li><i class="fa fa-star"></i></li>
-             <li><i class="fa fa-star"></i></li>`;
-         break;
+   //function rating () {
+   //  switch (moves) {
+     //  case 15:
+     //    starRating.innerHTML = `<li><i class="fa fa-star"></i></li>
+          //   <li><i class="fa fa-star"></i></li>`;
+        // break;
    
-       case 20:
-         starRating.innerHTML = `<li><i class="fa fa-star"></i></li>`;
-         break;
+     //  case 20:
+      //   starRating.innerHTML = `<li><i class="fa fa-star"></i></li>`;
+     //    break;
    
-       default:
-     }
-   }
+    //   default:
+    // }
+  // }
