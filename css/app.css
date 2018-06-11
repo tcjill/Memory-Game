@@ -105,7 +105,23 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+
 }
+.fa.fa-star {
+    color: blueviolet;
+    font-size: 2em;
+    letter-spacing: 0.4em; 
+}
+
+.fa.fa-star.hide {
+    display: none;
+}
+
+.stars > li {
+    list-style: none;
+    display: inline-block;
+ }
+
 #time{
     font-size: 50px;
    }

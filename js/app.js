@@ -96,7 +96,20 @@ function newGame() {
 
 let movesMade = 0;
 let cardsClicked = 0;
-
+function starRating(){
+    const stars = document.querySelectorAll('.fa-star');
+    const starsArray = Array.apply(null, stars);
+    if (moves === 0) {
+        starsArray.forEach(x => x.className = "fa fa-star");
+    }
+    if (moves > 10 && moves <= 12) {
+        starsArray[2].className = 'fa fa-star hide';
+    }
+    if (moves > 28) {
+        starsArray[2].className = 'fa fa-star hide';
+        starsArray[1].className = 'fa fa-star hide';
+    }
+}
 //set up event listener for a card clicked//
 
 
@@ -173,9 +186,9 @@ function cardMatch() {
            }
            
            openCards = []; //Empty openCards array
-       }, 700);
+       }, 700)
        // const time = document.getElementById('time');
-
+       starRating();
 
    }
 
@@ -193,7 +206,9 @@ function congratulations(){
    modal.style.display="block";
      finalTime = timer.innerHTML;
    }
+   
    }
+
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
