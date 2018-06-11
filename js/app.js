@@ -99,13 +99,13 @@ let cardsClicked = 0;
 function starRating(){
     const stars = document.querySelectorAll('.fa-star');
     const starsArray = Array.apply(null, stars);
-    if (moves === 0) {
+    if (movesMade === 0) {
         starsArray.forEach(x => x.className = "fa fa-star");
     }
-    if (moves > 10 && moves <= 12) {
+    if (movesMade > 10 && movesMade <= 12) {
         starsArray[2].className = 'fa fa-star hide';
     }
-    if (moves > 28) {
+    if (movesMade > 28) {
         starsArray[2].className = 'fa fa-star hide';
         starsArray[1].className = 'fa fa-star hide';
     }
@@ -227,20 +227,3 @@ span.onclick = function() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-
-//const starRating = document.getElementsByClassName('stars')[0];
-
-   //function rating () {
-   //  switch (moves) {
-     //  case 15:
-     //    starRating.innerHTML = `<li><i class="fa fa-star"></i></li>
-          //   <li><i class="fa fa-star"></i></li>`;
-        // break;
-   
-     //  case 20:
-      //   starRating.innerHTML = `<li><i class="fa fa-star"></i></li>`;
-     //    break;
-   
-    //   default:
-    // }
-  // }
