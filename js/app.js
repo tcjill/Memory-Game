@@ -202,6 +202,9 @@ function congratulations(){
    if (matchedCards.length === 16){
        
   //show congratulations modal
+   var starRating = document.querySelector('.stars').innerHTML;
+  document.getElementById('total-moves').innerHTML= moves;
+  document.getElementById('total-stars').innerHTML = starRating;
      var modal = document.getElementById('myModal');
    modal.style.display="block";
      finalTime = timer.innerHTML;
