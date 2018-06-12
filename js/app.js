@@ -202,7 +202,7 @@ function congratulations(){
    if (matchedCards.length === 16){
        
   //show congratulations modal
-     var modal =     document.getElementById('myModal');
+     var modal = document.getElementById('myModal');
    modal.style.display="block";
      finalTime = timer.innerHTML;
    }
