@@ -114,10 +114,10 @@ function starRating(){
 
 
 var cardList = document.querySelectorAll('.card');
-document.querySelector(".card").addEventListener("click", startTimer);
+//document.querySelector(".card").addEventListener("click", startTimer);
 for (let card of cardList) {
    card.addEventListener('click', function() {
-   
+    startTimer()
        cardsClicked++;
        if (cardsClicked == 2) {
 
@@ -203,7 +203,7 @@ function congratulations(){
        
   //show congratulations modal
    var starRating = document.querySelector('.stars').innerHTML;
-  document.getElementById('total-moves').innerHTML= moves;
+  document.getElementById('total-moves').innerHTML= movesMade ;
   document.getElementById('total-stars').innerHTML = starRating;
      var modal = document.getElementById('myModal');
    modal.style.display="block";
