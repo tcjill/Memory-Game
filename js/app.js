@@ -199,19 +199,17 @@ function cardMatch() {
  
  
 function congratulations(){
-   if (matchedCards.length === 16){
-       
-  //show congratulations modal
-   var starRating = document.querySelector('.stars').innerHTML;
-  document.getElementById('total-moves').innerHTML= movesMade ;
-  document.getElementById('total-stars').innerHTML = starRating;
-  document.getElementById('endTime').innerHTML = document.querySelector('.timerOutput').innerHTML;
-  //"your time was"+ document.querySelector('.timerOutput').innerHTML;
-  
-     var modal = document.getElementById('myModal');
-   modal.style.display="block";
-     finalTime = timer.innerHTML;
-   }
+    if (matchedCards.length === 16){
+        stopTimer();
+   //show congratulations modal
+    var starRating = document.querySelector('.stars').innerHTML;
+   document.getElementById('total-moves').innerHTML= movesMade;
+   document.getElementById('total-stars').innerHTML = starRating;
+   document.getElementById('endTime').innerHTML = document.querySelector('.timerOutput').innerHTML;
+      var modal = document.getElementById('myModal');
+    modal.style.display="block";
+   
+    }
    
    }
 
